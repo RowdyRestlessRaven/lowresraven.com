@@ -17,12 +17,6 @@ a img {
     opacity: 0%;
 }
 
-a img:hover {
-    transition: opacity 0.4s;
-    opacity: 100%;
-}
-
-
 /* Main page grid */
 
 .wrapper {
