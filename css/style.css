@@ -6,6 +6,8 @@
 body {
     background-color: #6d7a70;
     overflow: hidden scroll;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 a {
@@ -57,7 +59,7 @@ header {
 }
 
 #scroll-text {
-    font-size: auto;
+    font-size: 15px;
     transform: translateX(100%);
     white-space: nowrap;
     animation: scrolling 30s linear infinite;
@@ -103,9 +105,9 @@ nav {
     border: solid 1px black;
     background-color: #6d7a70; 
     flex: 1 1 0px;
-    padding: 7px;
+    padding: 1.5px;
     cursor: pointer;
-    font-size: 9px;
+    font-size: 14px;
     transition: transform 0.1s, background-color 0.1s;
 }
 
@@ -127,5 +129,14 @@ main {
 }
 
 .main-element {
-    padding-top: 30px;
+    padding-top: 50px;
+}
+
+/* FOOTER */
+
+footer {
+    font-family: visitor;
+    font-size: 14px;
+    text-align: center;
+    margin: 300px auto;
 }
