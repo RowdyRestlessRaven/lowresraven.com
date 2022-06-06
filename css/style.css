@@ -15,14 +15,26 @@ body {
 }
 
 a {
+    font-family: visitor;
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    transform: scale(98%);
+    color: #ffce0a;
+    transition: color 0.3s;
+}
+
+h1 {
+    font-family: visitor;
 }
 
 /* HEADER */
 
 header {
-    font-family: "visitor";
+    font-family: visitor;
     margin: 0 1% 0 1%;
     user-select: none;
 }
@@ -32,10 +44,11 @@ header {
 #mainheader {
     border: solid 1px black;
     padding: 5px 5px 0 5px;
+    margin-top: 10px;
     margin-bottom: 3px;
     display: grid;
     grid-template-rows: 70% 30%;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-items: stretch;
     align-self: stretch;
     height: 150px;
@@ -44,7 +57,6 @@ header {
 }
 
 #logo {
-    cursor: pointer;
     display: inline;
     gap: 5px;
     width: 100%;
@@ -86,13 +98,9 @@ header {
     overflow: hidden;
 }
 
-/* .grid-element {
-    border: solid 1px red;
-} */
-
 @keyframes scrolling {
     from {
-        transform: translateX(20%);
+        transform: translateX(100%);
     }
     to {
         transform: translateX(-100%);
@@ -102,7 +110,6 @@ header {
 /* Navbar */
 
 nav {
-    font-family: visitor;
     display: flex;
     margin: 0 1% 0 1%;
     gap: 3px;
@@ -110,6 +117,7 @@ nav {
     top: 2%;
     height: 30px;
     user-select: none;
+    z-index: 1;
 }
 
 .nav-element {
@@ -117,15 +125,8 @@ nav {
     background-color: #6d7a70; 
     flex: 1 1 0px;
     padding: 1.5px;
-    cursor: pointer;
     font-size: 14px;
     transition: transform 0.1s, background-color 0.1s, color 0.3s;
-}
-
-.nav-element:hover {
-    transform: scale(98%);
-    background-color: #ffce0a;
-    color: black;
 }
 
 .active-btn {
@@ -141,6 +142,94 @@ main {
 
 .main-element {
     padding-top: 50px;
+}
+
+/* Button grid */
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 30px auto;
+    grid-auto-flow: dense;
+    user-select: none;
+}
+
+.btn-grid a {
+    border: solid 1px black;
+    transition: transform 0.1s;
+    overflow: hidden;
+}
+
+.img-btn {
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.selected {
+    transform: scale(102%) !important;
+    z-index: 1;
+}
+
+.grid-element {
+    position: relative;
+}
+
+.expandcell {
+    grid-column: 1 / -1;
+    border: solid 1px black;
+    background-color: white;
+    padding: 0 5%;
+    user-select: text;
+    display: none;
+    z-index: 2;
+}
+
+.new div{
+    display: inline-block;
+}
+
+.new-banner {
+    font-family: visitor;
+    font-size: 25px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    width: 120px;
+    height: 20px;
+    transform: rotate(-45deg);
+    background-color: black;
+    object-fit: contain;
+    color: white;
+    display: none;
+}
+
+/* Collapse */
+
+.collapsed {
+    display: none;
+}
+
+.visible {
+    display: inline-block !important;
+}
+
+/* Video */
+
+.video-btn {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: none;
 }
 
 /* FOOTER */
