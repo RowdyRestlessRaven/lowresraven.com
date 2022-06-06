@@ -46,7 +46,7 @@ document.getElementById('see-all').onclick = function () {
         collapsedItems[i].classList.toggle("visible");
     }
     if (this.classList.contains('active')) {
-        this.innerHTML = 'see more >';
+        this.innerHTML = 'see all >';
         this.classList.toggle('active');
         for (let i = 0; i < expandList.length; i++) {
             expandList[i].classList.remove('visible');
